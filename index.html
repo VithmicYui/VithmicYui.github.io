@@ -149,11 +149,28 @@ background-image: url('editBgjh01.jpg');
             if (contentContainer.style.display === 'none') {
                 contentContainer.style.display = 'block';
                 // Code to load images and videos here (if needed)
+		 playVideos();
             } else {
                 contentContainer.style.display = 'none';
                 // Code to hide images and videos here
+		pauseVideos();
             }
         });
+// Function to play videos
+        function playVideos() {
+            var videos = document.getElementsByTagName('video');
+            for (var i = 0; i < videos.length; i++) {
+                videos[i].play();
+            }
+        }
+
+        // Function to pause videos
+        function pauseVideos() {
+            var videos = document.getElementsByTagName('video');
+            for (var i = 0; i < videos.length; i++) {
+                videos[i].pause();
+            }
+}
     </script>
 </body>
 </html>
