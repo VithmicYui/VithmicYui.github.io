@@ -8,17 +8,17 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
-            color: #333;
+            color: beige;
             text-align: center;
             padding: 20px;
-	background-image: url('bgKogimika.png'); 
+background-image: url('editBgjh01.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
         }
         h1 {
-            color: #ff6f69;
+            color: crimson;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         p {
@@ -45,14 +45,35 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
+ #toggle-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        /* Styling for the button hover state */
+        #toggle-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to Le Nguyen Thi Thanh Tuyen's Website</h1>
-    <p>This is the website of Le Nguyen Thi Thanh Tuyen.</p>
-    <p>Her student ID is 2011061968.</p>
+    <p>This is the website of Le Nguyen Thi Thanh Tuyen</p>
+    <p id="student-id">Her student ID is 2011061968</p>
+
+    <button id="toggle-button">Toggle Images and Videos</button>
     
-    <div class="content-container">
+    <div class="content-container" id="content-container" style="display: none;">
         <div class="row-container">
             <div>
                 <img src="364710526_2200637030106904_1500346830022812868_n.png" alt="Your Image">
@@ -120,6 +141,19 @@
         </div>
     </div>
     
-    <p>&copy; 2023 Le Nguyen Thi Thanh Tuyen. All rights reserved.</p>
+    <p>&copy; 2024 Le Nguyen Thi Thanh Tuyen. All rights reserved.</p>
+
+    <script>
+        document.getElementById('toggle-button').addEventListener('click', function() {
+            var contentContainer = document.getElementById('content-container');
+            if (contentContainer.style.display === 'none') {
+                contentContainer.style.display = 'block';
+                // Code to load images and videos here (if needed)
+            } else {
+                contentContainer.style.display = 'none';
+                // Code to hide images and videos here
+            }
+        });
+    </script>
 </body>
 </html>
